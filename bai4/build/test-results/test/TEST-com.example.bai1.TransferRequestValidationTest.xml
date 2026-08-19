@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.bai1.TransferRequestValidationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-08-19T09:04:06.896Z" hostname="DESKTOP-MFF1I3E" time="2.04">
+  <properties/>
+  <testcase name="Bị chặn khi mã ngân hàng không nằm trong danh sách hỗ trợ" classname="com.example.bai1.TransferRequestValidationTest" time="1.035"/>
+  <testcase name="Bị chặn khi số tiền &lt;= 10,000 VND" classname="com.example.bai1.TransferRequestValidationTest" time="0.014"/>
+  <testcase name="Bị chặn với đúng 5 lỗi khi gửi request sai toàn bộ" classname="com.example.bai1.TransferRequestValidationTest" time="0.081"/>
+  <testcase name="Thành công khi gửi request với đầy đủ dữ liệu hợp lệ" classname="com.example.bai1.TransferRequestValidationTest" time="0.006"/>
+  <system-out><![CDATA[16:04:07.300 [Test worker] INFO org.hibernate.validator.internal.util.Version -- HV000001: Hibernate Validator 9.1.0.Final
+
+--- LOG VIOLATIONS TỪ JUNIT TEST ---
+[bankCode] -> Mã ngân hàng không hợp lệ (hỗ trợ: VCB, TCB, MB, BIDV, CTG, ACB, VPB)
+[senderAccountId] -> ID tài khoản nguồn không được trống
+[description] -> Nội dung chuyển khoản không được vượt quá 255 ký tự
+[receiverAccountNumber] -> Số tài khoản người nhận không được trống
+[amount] -> Số tiền chuyển khoản phải lớn hơn 10,000 VND
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
